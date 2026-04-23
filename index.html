@@ -33,6 +33,15 @@
     
 </head>
 <body>
+    <!-- Barra de Progresso de Leitura -->
+    <div id="progress-bar"></div>
+
+    <!-- Faixa de Urgência Fixa -->
+    <div class="urgency-strip" id="urgency-strip">
+        🔥 ÚLTIMAS <span id="vagas-strip">47</span> VAGAS · OFERTA ENCERRA EM <span id="countdown-strip">23:47:33</span>
+        <a href="#oferta-final" class="urgency-strip-link">GARANTIR AGORA →</a>
+    </div>
+
     <!-- Header Sticky -->
     <header class="header-sticky" id="header">
         <div class="container">
@@ -55,38 +64,39 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
+                    <!-- Urgency + Social Proof -->
+                    <div class="urgency-badge">🔥 ÚLTIMAS <span id="vagas-urgency">47</span> VAGAS DESTA SEMANA</div>
+                    <div class="social-proof-header">⭐⭐⭐⭐⭐ Avaliado por 3.847 mães brasileiras</div>
+
                     <!-- Proof Badge -->
                     <div class="proof-badge">
                         <span class="proof-icon">✅</span>
                         <span class="proof-text">Método validado por 3.847 brasileiras</span>
                     </div>
-                    
+
                     <h1 class="hero-headline">
-                        A Mãe Brasileira de <span class="highlight-age">34 Anos</span> Que Descobriu Como 
-                        <span class="highlight-benefit">Emagrecer 12kg em 3 Meses</span> Gastando 
-                        <span class="highlight-money">Apenas R$ 180/Semana</span> no Supermercado
-                        <span class="highlight-pain">Sem Passar Fome, Sem Ingredientes Caros e Sem Receitas Complicadas</span>
+                        Finalmente! O Método Que Fez <span class="highlight-benefit">3.847 Mães Brasileiras Economizarem R$ 200/Semana</span> no Supermercado
+                        <span class="highlight-pain">E Ainda Emagreceram Sem Passar Fome</span>
                     </h1>
                     
                     <div class="hero-subheadline">
                         <p>
-                            <strong>Método testado e aprovado por 3.847 mulheres brasileiras</strong> que transformaram completamente sua alimentação usando apenas ingredientes que você encontra no mercado da esquina - 
-                            <em>arroz, feijão, frango, ovos e verduras comuns</em>
+                            Receitas práticas com ingredientes de R$ 2,50 que você encontra no Atacadão, Extra ou mercado da esquina - <strong>sem quinoa, sem chia, sem frescura!</strong>
                         </p>
                     </div>
                     
                     <!-- Social Proof Numbers -->
                     <div class="social-proof-numbers">
                         <div class="proof-item">
-                            <span class="proof-number">3.847</span>
+                            <span class="proof-number" data-count="3847" data-suffix="">3.847</span>
                             <span class="proof-label">Mulheres Transformadas</span>
                         </div>
                         <div class="proof-item">
-                            <span class="proof-number">127kg</span>
+                            <span class="proof-number" data-count="127" data-suffix="kg">127kg</span>
                             <span class="proof-label">Total Eliminado</span>
                         </div>
                         <div class="proof-item">
-                            <span class="proof-number">R$ 847</span>
+                            <span class="proof-number" data-count="847" data-prefix="R$ ">R$ 847</span>
                             <span class="proof-label">Economia Média/Mês</span>
                         </div>
                     </div>
@@ -94,8 +104,7 @@
                     <!-- CTA Principal -->
                     <div class="hero-cta">
                         <a href="#oferta-final" class="btn-primary btn-hero">
-                            <span class="btn-icon">🚀</span>
-                            Quero Transformar Minha Vida Agora!
+                            QUERO ECONOMIZAR R$ 200/SEMANA AGORA!
                         </a>
                         <div class="cta-benefits">
                             <span>✅ Acesso Imediato</span>
@@ -152,56 +161,57 @@
     <section class="problems-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Você Reconhece Essas Situações?</h2>
+                <h2 class="section-title">Você Está Cansada Dessas Situações?</h2>
                 <p class="section-subtitle">Se você se identificar com pelo menos 3 dessas situações, este método foi feito para você...</p>
             </div>
             
             <div class="problems-grid">
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="problem-icon">😰</div>
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>A Geladeira Vazia de Ideias</h3>
-                        <p>Você abre a geladeira 5 vezes por dia sem saber o que cozinhar de saudável, acaba fazendo sempre a mesma coisa ou pedindo delivery?</p>
+                        <p>Abre a geladeira 5x por dia e só vê ingredientes sem saber fazer NADA saudável?</p>
                     </div>
                 </div>
-                
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="problem-icon">💸</div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>O Supermercado Que Devora Seu Salário</h3>
-                        <p>Gasta mais de R$ 400 por semana no supermercado, compra um monte de coisa "saudável" cara e metade apodrece na geladeira?</p>
+                        <p>Gasta R$ 400+ no supermercado e metade apodrece porque não sabe usar direito?</p>
                     </div>
                 </div>
-                
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="problem-icon">😫</div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>O Ciclo Infinito das Dietas</h3>
-                        <p>Já tentou 5, 10, 15 dietas diferentes? Começa super animada, segue 2 semanas e desiste porque é complicado demais?</p>
+                        <p>Seus filhos reclamam de TUDO que você faz e só querem miojo e nuggets?</p>
                     </div>
                 </div>
-                
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="problem-icon">🍕</div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>A Culpa do Delivery</h3>
-                        <p>Chega em casa depois de um dia exaustivo, não tem nada pronto e acaba pedindo pizza, hambúrguer ou comida chinesa "só hoje"?</p>
+                        <p>Chega em casa exausta e pede delivery porque "não tem nada pronto"?</p>
                     </div>
                 </div>
-                
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="problem-icon">😔</div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>O Espelho Que Não Mente</h3>
-                        <p>Evita olhar no espelho, compra roupas cada vez maiores e sente vergonha de fotos ou de ir à praia com a família?</p>
+                        <p>Já tentou 10+ dietas e sempre desiste porque são complicadas demais?</p>
                     </div>
                 </div>
-                
-                <div class="problem-item" data-aos="fade-up" data-aos-delay="600">
-                    <div class="problem-icon">😴</div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="problem-icon">✗</div>
                     <div class="problem-content">
-                        <h3>A Energia Que Sumiu</h3>
-                        <p>Vive cansada, sem energia para brincar com os filhos, sente sono após o almoço e precisa de café o dia todo?</p>
+                        <p>Vê receitas "fit" com ingredientes de R$ 30 e pensa: "quem tem dinheiro pra isso?"</p>
+                    </div>
+                </div>
+
+                <div class="problem-item problema-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="problem-icon">✗</div>
+                    <div class="problem-content">
+                        <p>Se sente culpada toda vez que dá porcaria pros filhos mas não sabe o que fazer?</p>
                     </div>
                 </div>
             </div>
@@ -209,20 +219,20 @@
             <!-- Emotional Agitation -->
             <div class="emotional-section">
                 <div class="emotional-content">
-                    <blockquote class="emotional-quote">
-                        <p>"Eu sei <strong>exatamente</strong> como você se sente...</p>
-                        <p>Porque eu já estive no seu lugar. Essa sensação de <em>olhar no espelho e não se reconhecer</em>. De comprar roupas maiores porque as antigas não servem mais. De sentir <strong>vergonha na praia</strong> ou na piscina...</p>
-                        <p>E o pior de tudo: ver outras mães conseguindo ter uma alimentação saudável enquanto você continua <strong>presa nesse ciclo</strong> de tentativa e fracasso."</p>
+                    <blockquote class="emotional-quote agitacao-emocional">
+                        <p>Eu sei <strong>EXATAMENTE</strong> como é essa frustração... Já estive aí.</p>
+                        <p>Essa sensação de ser uma <strong>MÃE INCOMPETENTE</strong> que não consegue nem alimentar a família direito. De ver outras mães postando almoços lindos no Instagram enquanto você esquenta nuggets de novo.</p>
+                        <p>De se sentir um <strong>FRACASSO</strong> toda vez que pede delivery.</p>
                     </blockquote>
                     
-                    <div class="consequence-box">
-                        <h3>⚠️ Se Nada Mudar, Daqui a 1 Ano Você Estará:</h3>
+                    <div class="consequence-box consequencia-box">
+                        <h3>⚠️ E olha o que acontece se nada mudar nos próximos 12 meses:</h3>
                         <ul class="consequence-list">
-                            <li>Ainda mais pesada e cansada (possivelmente +8kg a +15kg)</li>
-                            <li>Gastando ainda mais dinheiro com remédios para pressão, diabetes e colesterol</li>
-                            <li>Vendo seus filhos copiarem seus maus hábitos alimentares</li>
-                            <li>Perdendo oportunidades profissionais e pessoais por falta de autoestima</li>
-                            <li>Desenvolvendo problemas de saúde que poderiam ser evitados</li>
+                            <li>Seus filhos vão desenvolver os MESMOS hábitos ruins que você</li>
+                            <li>Você vai gastar mais R$ 4.800 em delivery e comida pronta</li>
+                            <li>Sua autoestima como mãe vai ficar AINDA PIOR</li>
+                            <li>Problemas de saúde vão aparecer (diabetes, pressão alta, colesterol)</li>
+                            <li>Sua família vai normalizar comer porcaria para sempre</li>
                         </ul>
                     </div>
                 </div>
@@ -234,8 +244,8 @@
         <div class="container">
             <div class="transition-content">
                 <h2 class="transition-title">
-                    Mas E Se Eu Te Dissesse Que Existe Uma Forma 
-                    <span class="highlight-transition">MUITO Mais Simples?</span>
+                    CHEGA! Existe Uma Forma
+                    <span class="highlight-transition">BRASILEIRA de Resolver Isso de Uma Vez Por Todas!</span>
                 </h2>
                 <div class="transition-arrow">↓</div>
             </div>
@@ -256,7 +266,7 @@
                     </h2>
                     
                     <p class="solution-description">
-                        O <strong>único sistema digital completo</strong> que ensina mulheres brasileiras como ter uma alimentação saudável, saborosa e econômica usando <em>apenas ingredientes que você encontra no Atacadão, Extra ou mercado da esquina</em> - <strong>sem complicação, sem ingredientes caros e sem passar fome.</strong>
+                        O <strong>primeiro sistema brasileiro</strong> que ensina mães ocupadas a alimentar a família com <strong>R$ 180/semana</strong> usando SÓ ingredientes do supermercado comum. <em>Sem frescura, sem ingredientes caros, sem complicação.</em>
                     </p>
                     
                     <!-- Method Steps -->
@@ -266,24 +276,24 @@
                         <div class="step-item">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>Baixe o Sistema Completo</h4>
-                                <p>Você recebe imediatamente todos os materiais: e-book completo, listas de compras organizadas, templates de planejamento e acesso à comunidade exclusiva.</p>
+                                <h4>ORGANIZE</h4>
+                                <p>2h no domingo você planeja a semana inteira</p>
                             </div>
                         </div>
-                        
+
                         <div class="step-item">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>Organize Sua Semana (2h no Domingo)</h4>
-                                <p>Usando nossos templates prontos, você planeja toda a semana em apenas 2-3 horas no domingo. Cardápio, lista de compras, preparo - tudo organizado!</p>
+                                <h4>COMPRE</h4>
+                                <p>Lista pronta com preços médios de cada item</p>
                             </div>
                         </div>
-                        
+
                         <div class="step-item">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Veja os Resultados na 1ª Semana</h4>
-                                <p>Siga o planejamento e veja: mais energia, menos gasto no supermercado, família satisfeita e você se sentindo orgulhosa da sua alimentação!</p>
+                                <h4>EXECUTE</h4>
+                                <p>Receitas de 15-30min com ingredientes que você já tem</p>
                             </div>
                         </div>
                     </div>
@@ -336,46 +346,60 @@
             </div>
             
             <div class="benefits-grid">
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="benefit-icon">⚖️</div>
-                    <h3>Emagreça de Forma Saudável</h3>
-                    <p>Perca de 3kg a 15kg sem passar fome, sem cortar carboidrato e sem sofrer. Alimentação equilibrada que sua família toda vai aprovar.</p>
-                    <div class="benefit-proof">Resultado médio: -8kg em 3 meses</div>
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>ECONOMIZE R$ 200+ por semana</h3>
+                        <p>sua conta do supermercado vai CAIR pela metade</p>
+                    </div>
                 </div>
-                
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Tenha Energia de Sobra</h3>
-                    <p>Acorde disposta, brinque com os filhos, trabalhe com foco. Adeus cansaço após o almoço e dependência de café o dia todo.</p>
-                    <div class="benefit-proof">98% relatam mais energia em 15 dias</div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>SEUS FILHOS vão PEDIR BIS</h3>
+                        <p>receitas que crianças brasileiras realmente comem</p>
+                    </div>
                 </div>
-                
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Economize até R$ 200/Semana</h3>
-                    <p>Lista de compras inteligente, aproveitamento total dos alimentos, zero desperdício. Sua conta do supermercado vai diminuir drasticamente.</p>
-                    <div class="benefit-proof">Economia média: R$ 847/mês</div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>ZERO DESPERDÍCIO</h3>
+                        <p>aproveite 100% do que comprar, nada vai pro lixo</p>
+                    </div>
                 </div>
-                
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="benefit-icon">🗑️</div>
-                    <h3>Elimine o Desperdício</h3>
-                    <p>Nunca mais jogue comida fora. Sistema de aproveitamento total: talos, cascas, sobras - tudo vira receita deliciosa.</p>
-                    <div class="benefit-proof">Redução de 89% no desperdício</div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>MAIS TEMPO LIVRE</h3>
+                        <p>organização de 2h rende 7 dias sem stress</p>
+                    </div>
                 </div>
-                
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="benefit-icon">📅</div>
-                    <h3>Organize Sua Vida</h3>
-                    <p>Saiba exatamente o que comer cada dia, tenha sempre algo gostoso pronto, elimine o stress do "o que vou fazer pro almoço?"</p>
-                    <div class="benefit-proof">2-3h no domingo organiza a semana toda</div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>EMAGRECIMENTO NATURAL</h3>
+                        <p>sem passar fome, sem cortar carboidrato</p>
+                    </div>
                 </div>
-                
-                <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">
-                    <div class="benefit-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Transforme Sua Família</h3>
-                    <p>Ensine seus filhos a comerem bem desde cedo. Receitas que as crianças amam, marido aprova e sogra elogia.</p>
-                    <div class="benefit-proof">94% das famílias adotaram os hábitos</div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>ENERGIA REAL</h3>
+                        <p>disposição para brincar com os filhos toda tarde</p>
+                    </div>
+                </div>
+
+                <div class="beneficio-card benefit-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="beneficio-numero">✅</div>
+                    <div class="benefit-content">
+                        <h3>ORGULHO DE MÃE</h3>
+                        <p>se sinta competente alimentando sua família</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,65 +408,65 @@
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Mais de 3.847 Mulheres Já Transformaram Suas Vidas</h2>
+                <h2 class="section-title">Veja Como 3.847 Mães Brasileiras Mudaram Suas Vidas (E Suas Contas!)</h2>
                 <p class="section-subtitle">Veja os resultados reais de quem seguiu o método...</p>
             </div>
             
             <div class="testimonials-grid">
-                <div class="testimonial-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card featured depoimento-destaque" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva" loading="lazy">
                         </div>
                         <div class="testimonial-info">
                             <h4>Maria Silva</h4>
-                            <span>34 anos, São Paulo - SP</span>
+                            <span>34 anos, mãe de 2 filhos - São Paulo/SP</span>
                             <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         </div>
                     </div>
                     <blockquote>
-                        "Perdi 12kg em 3 meses e meu orçamento do supermercado <strong>diminuiu R$ 180 por semana!</strong> Agora sei exatamente o que comprar, como preparar e meus filhos pararam de reclamar da comida. O método é simples demais, não sei por que não encontrei isso antes!"
+                        "Em 2 meses economizei R$ 380 no supermercado E perdi 8kg! Meus filhos pararam de reclamar da comida e agora pedem bis. Melhor investimento da minha vida!"
                     </blockquote>
                     <div class="testimonial-result">
-                        <span class="result-badge">Resultado: -12kg em 3 meses</span>
+                        <span class="resultado-badge">RESULTADO: -8kg + R$ 380 economizados</span>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos" loading="lazy">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Carla" loading="lazy">
                         </div>
                         <div class="testimonial-info">
-                            <h4>Ana Santos</h4>
-                            <span>29 anos, Rio de Janeiro - RJ</span>
+                            <h4>Ana Carla</h4>
+                            <span>29 anos, mãe solo - Rio de Janeiro/RJ</span>
                             <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         </div>
                     </div>
                     <blockquote>
-                        "Meus filhos pararam de reclamar da comida e estão comendo verduras! <strong>Perdi 7kg em 2 meses</strong> e o melhor: tenho energia para correr atrás deles no parque. Receitas práticas, ingredientes baratos, resultado garantido."
+                        "Finalmente sei o que cozinhar! A organização mudou minha vida. Sobra tempo pra mim e os meninos comem verdura sem drama."
                     </blockquote>
                     <div class="testimonial-result">
-                        <span class="result-badge">Resultado: -7kg em 2 meses</span>
+                        <span class="resultado-badge">RESULTADO: +15h livres por semana</span>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Carla Oliveira" loading="lazy">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patricia Lima" loading="lazy">
                         </div>
                         <div class="testimonial-info">
-                            <h4>Carla Oliveira</h4>
-                            <span>38 anos, Belo Horizonte - MG</span>
+                            <h4>Patricia Lima</h4>
+                            <span>37 anos, mãe de 3 - Belo Horizonte/MG</span>
                             <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         </div>
                     </div>
                     <blockquote>
-                        "Finalmente uma 'dieta' que cabe no meu bolso e na minha rotina! <strong>Economizei R$ 300 no primeiro mês</strong> e ainda emagreci 5kg. As receitas são deliciosas e meu marido até elogiou. Recomendo de olhos fechados!"
+                        "Gastava R$ 500/semana e jogava metade fora. Hoje gasto R$ 180 e uso TUDO. Meu marido não acredita na economia!"
                     </blockquote>
                     <div class="testimonial-result">
-                        <span class="result-badge">Economia: R$ 300/mês</span>
+                        <span class="resultado-badge">RESULTADO: R$ 320 economia semanal</span>
                     </div>
                 </div>
                 
@@ -507,19 +531,19 @@
             <!-- Stats Proof -->
             <div class="stats-proof">
                 <div class="stat-item">
-                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-number" data-count="4.9" data-suffix="/5" data-decimals="1">4.9/5</span>
                     <span class="stat-label">Avaliação Média</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">96%</span>
+                    <span class="stat-number" data-count="96" data-suffix="%">96%</span>
                     <span class="stat-label">Recomendariam</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">8.7kg</span>
+                    <span class="stat-number" data-count="8.7" data-suffix="kg" data-decimals="1">8.7kg</span>
                     <span class="stat-label">Perda Média</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">R$ 847</span>
+                    <span class="stat-number" data-count="847" data-prefix="R$ ">R$ 847</span>
                     <span class="stat-label">Economia Média</span>
                 </div>
             </div>
@@ -537,41 +561,41 @@
                 <div class="objection-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="objection-question">
                         <span class="objection-icon">💭</span>
-                        <h3>"Não tenho tempo para ficar cozinhando o dia todo..."</h3>
+                        <h3>"Não tenho tempo pra ficar cozinhando..."</h3>
                     </div>
-                    <div class="objection-answer">
+                    <div class="objection-answer objecao-resposta">
                         <div class="answer-badge">RESPOSTA HONESTA:</div>
-                        <p><strong>Você vai gastar MENOS tempo na cozinha!</strong> O sistema foi criado especialmente para mulheres ocupadas como você. Você organiza TUDO em apenas 2-3 horas no domingo (menos tempo que você gasta assistindo Netflix!) e o resto da semana flui automaticamente. Muitas alunas relatam ter <em>ganhado 5-8 horas livres por semana</em> com a organização.</p>
+                        <p><strong>O sistema ECONOMIZA tempo!</strong> 2h no domingo organizam 7 dias. Menos tempo que você gasta vendo Netflix!</p>
                     </div>
                 </div>
                 <div class="objection-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="objection-question">
                         <span class="objection-icon">💭</span>
-                        <h3>"Deve ser caro como todas as outras dietas..."</h3>
+                        <h3>"Meus filhos são muito enjoados..."</h3>
                     </div>
-                    <div class="objection-answer">
-                        <div class="answer-badge">COMPARAÇÃO REAL:</div>
-                        <p><strong>Pelo contrário!</strong> Uma consulta com nutricionista custa R$ 150-300 <em>por sessão</em>. Um acompanhamento completo sai por R$ 800-1.500/mês. Aqui você paga <strong>R$ 97 UMA ÚNICA VEZ</strong> e ainda economiza centenas de reais no supermercado todo mês. É o investimento que se paga sozinho!</p>
+                    <div class="objection-answer objecao-resposta">
+                        <div class="answer-badge">FAMÍLIA APROVADA:</div>
+                        <p>São receitas que <strong>CRIANÇAS BRASILEIRAS comem!</strong> Nada de quinoa - é estrogonofe, lasanha, bife acebolado... só que saudável!</p>
                     </div>
                 </div>
                 <div class="objection-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="objection-question">
                         <span class="objection-icon">💭</span>
-                        <h3>"Eu não sei cozinhar direito, sou péssima na cozinha..."</h3>
+                        <h3>"Deve ser caro como outras dietas..."</h3>
                     </div>
-                    <div class="objection-answer">
-                        <div class="answer-badge">PERFEITO PARA VOCÊ:</div>
-                        <p><strong>As receitas foram pensadas para quem mal sabe fritar um ovo!</strong> Passo a passo simples, com ingredientes básicos que você já conhece: arroz, feijão, frango, ovos, batata... Sem técnicas complicadas, sem ingredientes exóticos. Se você sabe fazer miojo, consegue fazer nossas receitas!</p>
+                    <div class="objection-answer objecao-resposta">
+                        <div class="answer-badge">COMPARAÇÃO REAL:</div>
+                        <p>Uma consulta de nutricionista custa R$ 200. Aqui você paga <strong>R$ 97 UMA VEZ</strong> e economiza R$ 200 <strong>TODA SEMANA!</strong></p>
                     </div>
                 </div>
                 <div class="objection-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="objection-question">
                         <span class="objection-icon">💭</span>
-                        <h3>"Minha família vai reclamar da comida saudável..."</h3>
+                        <h3>"Eu não sei cozinhar direito, sou péssima na cozinha..."</h3>
                     </div>
-                    <div class="objection-answer">
-                        <div class="answer-badge">FAMÍLIA APROVADA:</div>
-                        <p><strong>São receitas BRASILEIRAS de verdade!</strong> Nada de quinoa, chia ou spirulina. Seus filhos vão comer estrogonofe, lasanha, bife acebolado, brigadeiro fit, bolo de cenoura... só que de forma saudável! 94% das nossas alunas relatam que a família <em>nem percebeu</em> a mudança, apenas elogiou!</p>
+                    <div class="objection-answer objecao-resposta">
+                        <div class="answer-badge">PERFEITO PARA VOCÊ:</div>
+                        <p><strong>As receitas foram pensadas para quem mal sabe fritar um ovo!</strong> Passo a passo simples, com ingredientes básicos que você já conhece. Se você sabe fazer miojo, consegue fazer nossas receitas!</p>
                     </div>
                 </div>
                 <div class="objection-item" data-aos="fade-up" data-aos-delay="500">
@@ -611,7 +635,7 @@
                 
                 <div class="guarantee-description">
                     <h4>Sua Compra Está Totalmente Protegida</h4>
-                    <p>Se em 30 dias você não conseguir organizar sua alimentação, não sentir mais energia, não economizar no supermercado ou simplesmente não gostar do método, eu <strong>DEVOLVEMOS 100% do seu dinheiro.</strong></p>
+                    <p>Se você não economizar pelo menos <strong>R$ 150 na primeira semana</strong> OU se seus filhos não comerem as receitas, devolvemos <strong>100% do seu dinheiro. SEM PERGUNTAS!</strong></p>
                     
                     <div class="guarantee-benefits">
                         <div class="guarantee-item">
@@ -674,7 +698,7 @@
         <div class="container">
             <div class="offer-content">
                 <div class="offer-header">
-                    <h2 class="offer-title">Aqui Está TUDO Que Você Recebe no Nutrição Descomplicada:</h2>
+                    <h2 class="offer-title">ÚLTIMA CHANCE: Veja TUDO Que Você Leva Por Menos de R$ 100</h2>
                     <p class="offer-subtitle">Sistema completo para transformar sua alimentação e sua vida...</p>
                 </div>
                 
@@ -686,68 +710,44 @@
                         </div>
                         
                         <div class="product-details">
-                            <h3>📚 E-BOOK COMPLETO "Nutrição Descomplicada"</h3>
+                            <h3>📚 SISTEMA NUTRIÇÃO DESCOMPLICADA COMPLETO</h3>
                             <div class="product-features-list">
-                                <div class="feature">✅ 127 páginas com receitas práticas brasileiras</div>
-                                <div class="feature">✅ Guia completo de substituições inteligentes</div>
-                                <div class="feature">✅ Lista de compras organizada por seção do mercado</div>
-                                <div class="feature">✅ Tabela nutricional simplificada</div>
-                                <div class="feature">✅ Receitas para café da manhã, almoço, jantar e lanches</div>
+                                <div class="feature">✅ 127 páginas de receitas práticas (ingredientes de R$ 2-5)</div>
+                                <div class="feature">✅ 60 receitas que seus filhos VÃO COMER</div>
+                                <div class="feature">✅ Planejamento semanal pronto (só seguir)</div>
+                                <div class="feature">✅ Listas organizadas por corredor do supermercado</div>
+                                <div class="feature">✅ Método anti-desperdício (zero comida no lixo)</div>
                             </div>
-                            <div class="product-value">Valor Individual: <span class="original-price">R$ 197</span></div>
+                            <div class="product-value">Valor Individual: <span class="original-price">R$ 297</span></div>
                         </div>
                     </div>
                     <div class="bonus-products">
                         <div class="bonus-item">
-                            <div class="bonus-icon">📋</div>
+                            <div class="bonus-icon">🎁</div>
                             <div class="bonus-content">
-                                <h4>BÔNUS 1: Guia de Organização Alimentar Semanal</h4>
-                                <ul>
-                                    <li>Templates prontos para planejar sua semana</li>
-                                    <li>Cronograma de preparo otimizado</li>
-                                    <li>Sistema anti-desperdício</li>
-                                    <li>Planejamento de cardápio mensal</li>
-                                </ul>
-                                <div class="bonus-value">Valor: <span class="original-price">R$ 97</span></div>
-                            </div>
-                        </div>
-                        <div class="bonus-item">
-                            <div class="bonus-icon">🎯</div>
-                            <div class="bonus-content">
-                                <h4>BÔNUS 2: Metodologia de Planejamento Nutricional</h4>
-                                <ul>
-                                    <li>Como montar pratos equilibrados sem complicação</li>
-                                    <li>Fórmula simples para variar sem errar</li>
-                                    <li>Técnicas para manter a família satisfeita</li>
-                                    <li>Guia de porções ideais</li>
-                                </ul>
-                                <div class="bonus-value">Valor: <span class="original-price">R$ 127</span></div>
-                            </div>
-                        </div>
-                        <div class="bonus-item">
-                            <div class="bonus-icon">💡</div>
-                            <div class="bonus-content">
-                                <h4>BÔNUS 3: Acesso à Comunidade Exclusiva</h4>
-                                <ul>
-                                    <li>Grupo privado no Telegram</li>
-                                    <li>Trocas de experiências com outras mães</li>
-                                    <li>Suporte direto para suas dúvidas</li>
-                                    <li>Lives mensais com dicas extras</li>
-                                </ul>
+                                <h4>BÔNUS 1: 30 Lanches Práticos Para Escola</h4>
                                 <div class="bonus-value">Valor: <span class="original-price">R$ 67</span></div>
                             </div>
                         </div>
                         <div class="bonus-item">
                             <div class="bonus-icon">🎁</div>
                             <div class="bonus-content">
-                                <h4>BÔNUS 4: Kit Receitas Especiais</h4>
-                                <ul>
-                                    <li>25 receitas de sobremesas saudáveis</li>
-                                    <li>15 lanches práticos para levar</li>
-                                    <li>Receitas para datas especiais</li>
-                                    <li>Versões saudáveis dos pratos favoritos das crianças</li>
-                                </ul>
-                                <div class="bonus-value">Valor: <span class="original-price">R$ 87</span></div>
+                                <h4>BÔNUS 2: Sobremesas Saudáveis Que Crianças Amam</h4>
+                                <div class="bonus-value">Valor: <span class="original-price">R$ 47</span></div>
+                            </div>
+                        </div>
+                        <div class="bonus-item">
+                            <div class="bonus-icon">🎁</div>
+                            <div class="bonus-content">
+                                <h4>BÔNUS 3: Cardápio de Emergência - 15min</h4>
+                                <div class="bonus-value">Valor: <span class="original-price">R$ 37</span></div>
+                            </div>
+                        </div>
+                        <div class="bonus-item">
+                            <div class="bonus-icon">🎁</div>
+                            <div class="bonus-content">
+                                <h4>BÔNUS 4: Grupo VIP no WhatsApp</h4>
+                                <div class="bonus-value">Valor: <span class="original-price">R$ 97</span></div>
                             </div>
                         </div>
                     </div>
@@ -759,14 +759,14 @@
                             <h4>Valor Total dos Materiais:</h4>
                             <div class="total-value">
                                 <span class="currency">R$</span>
-                                <span class="amount">575</span>
+                                <span class="amount">545</span>
                             </div>
                             <div class="value-breakdown">
-                                <div class="breakdown-item">E-book Principal: R$ 197</div>
-                                <div class="breakdown-item">Guia Organização: R$ 97</div>
-                                <div class="breakdown-item">Metodologia: R$ 127</div>
-                                <div class="breakdown-item">Comunidade: R$ 67</div>
-                                <div class="breakdown-item">Kit Receitas: R$ 87</div>
+                                <div class="breakdown-item">Sistema Principal: R$ 297</div>
+                                <div class="breakdown-item">Bônus 1 - Lanches: R$ 67</div>
+                                <div class="breakdown-item">Bônus 2 - Sobremesas: R$ 47</div>
+                                <div class="breakdown-item">Bônus 3 - Emergência: R$ 37</div>
+                                <div class="breakdown-item">Bônus 4 - Grupo VIP: R$ 97</div>
                             </div>
                         </div>
                         
@@ -783,17 +783,19 @@
                                     <span class="amount">97</span>
                                 </div>
                                 <div class="installments">ou 12x de R$ 8,08 sem juros</div>
-                                <div class="discount-badge">83% DE DESCONTO</div>
+                                <div class="discount-badge economia-badge">82% DE DESCONTO — ECONOMIA: R$ 448</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- CTA Section -->
                 <div class="cta-section">
+                    <div class="oferta-urgencia">
+                        ⏰ RESTAM 47 VAGAS &nbsp;|&nbsp; 🔥 OFERTA EXPIRA EM: <strong id="countdown-inline">23:47:33</strong> &nbsp;|&nbsp; ⚠️ APÓS FECHAR ESTA PÁGINA, PREÇO VOLTA PARA R$ 297
+                    </div>
                     <div class="cta-main">
-                        <a href="#" class="btn-purchase" id="btn-checkout">
-                            <span class="btn-icon">🚀</span>
-                            <span class="btn-text">SIM! QUERO TRANSFORMAR MINHA VIDA AGORA</span>
+                        <a href="#" class="btn-purchase cta-final" id="btn-checkout">
+                            <span class="btn-text">QUERO ECONOMIZAR R$ 200/SEMANA COMEÇANDO HOJE!</span>
                             <span class="btn-subtext">Acesso imediato • Garantia de 30 dias</span>
                         </a>
                         

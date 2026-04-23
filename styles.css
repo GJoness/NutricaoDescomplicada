@@ -2,6 +2,108 @@
    NUTRIÇÃO DESCOMPLICADA — STYLESHEET
    ============================================== */
 
+/* === Barra de Progresso de Leitura === */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #27ae60 0%, #f39c12 55%, #e74c3c 100%);
+  z-index: 9999;
+  transition: width 0.15s linear;
+  pointer-events: none;
+  border-radius: 0 2px 2px 0;
+}
+
+/* === Faixa de Urgência no Topo === */
+.urgency-strip {
+  background: linear-gradient(90deg, #922b21, #e74c3c, #922b21);
+  color: #fff;
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.urgency-strip-link {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.urgency-strip-link:hover { background: rgba(255,255,255,.2); }
+@media (max-width: 480px) { .urgency-strip { font-size: 11px; gap: 8px; } }
+
+/* === CTA Botão Pulsante === */
+@keyframes ctaPulse {
+  0%,100% { box-shadow: 0 8px 25px rgba(39,174,96,.4), 0 0 0 0 rgba(39,174,96,.2); }
+  60%     { box-shadow: 0 8px 40px rgba(39,174,96,.65), 0 0 0 16px rgba(39,174,96,0); }
+}
+.btn-purchase { animation: ctaPulse 2.5s ease-in-out infinite; }
+
+/* === ✗ Ícone dos Problemas === */
+.problem-icon {
+  font-size: 16px !important;
+  color: #e74c3c !important;
+  font-weight: 900 !important;
+  min-width: 36px;
+  height: 36px;
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* === Hover nos cards de depoimentos === */
+.testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
+.testimonial-card:hover { transform: translateY(-6px) !important; box-shadow: 0 16px 48px rgba(0,0,0,0.13) !important; }
+
+/* === Hover nos cards de benefícios === */
+.beneficio-card { transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease !important; }
+.beneficio-card:hover { transform: translateX(6px) !important; border-color: #1e8449 !important; background: #f0fdf4 !important; }
+
+/* === Hover nos itens de problema === */
+.problema-item { transition: background 0.25s ease, border-left-color 0.25s ease, transform 0.25s ease !important; }
+.problema-item:hover { background: #fff5f5 !important; border-left-color: #c0392b !important; transform: translateX(5px) !important; }
+
+/* === Objeção resposta hover === */
+.objection-item { transition: box-shadow 0.25s ease; }
+.objection-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,.09); }
+
+/* === Número animado (proof numbers e stats) === */
+[data-count] { display: inline-block; }
+
+/* === Correções de Conversão === */
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+.urgency-badge { background: #e74c3c; color: white; padding: 8px 20px; border-radius: 20px; font-weight: 700; text-align: center; margin-bottom: 16px; animation: pulse 2s infinite; display: inline-block; }
+.social-proof-header { color: #f39c12; font-size: 18px; font-weight: 600; text-align: center; margin-bottom: 20px; }
+.problema-item { border-left: 4px solid #e74c3c; padding-left: 12px; }
+.agitacao-emocional { background: #fff3cd; border: 2px solid #ffc107; padding: 20px; border-radius: 8px; }
+.consequencia-box { background: linear-gradient(135deg, #ffebee, #ffcdd2); border-radius: 8px; padding: 20px; }
+.beneficio-card { background: #f8fff8; border: 2px solid #27ae60; border-radius: 12px; padding: 20px; margin: 16px 0; display: flex; align-items: flex-start; gap: 16px; }
+.beneficio-numero { background: #27ae60; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+.depoimento-destaque { border: 3px solid #f39c12 !important; background: linear-gradient(135deg, #fff8e1, #fff3c4) !important; }
+.resultado-badge { background: #27ae60; color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: bold; display: inline-block; margin-top: 8px; }
+.objecao-resposta { background: #e8f5e8; border-left: 4px solid #27ae60; padding: 16px; border-radius: 0 8px 8px 0; }
+.oferta-urgencia { background: #e74c3c; color: white; padding: 16px; border-radius: 8px; text-align: center; margin-bottom: 20px; animation: pulse 2s infinite; font-weight: 600; }
+.preco-destaque { font-size: 48px; color: #27ae60; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+.economia-badge { background: #f39c12; color: white; padding: 8px 16px; border-radius: 20px; font-weight: bold; display: inline-block; font-size: 14px; }
+.cta-final { background: linear-gradient(135deg, #27ae60, #2ecc71) !important; padding: 25px 50px !important; font-size: 22px !important; border-radius: 12px !important; box-shadow: 0 8px 25px rgba(39,174,96,0.4) !important; }
+
 /* === Design Tokens === */
 :root {
   --primary:       #27ae60;
